@@ -1,0 +1,20 @@
+.htaccess
+.env
+assets/uploads/*
+!assets/uploads/index.html
+api_log*
+worker/*
+!worker/index.html
+
+deploy.log
+deploy.php
+
+
+
+#----- (Custom changes) -
+composer.lock
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*

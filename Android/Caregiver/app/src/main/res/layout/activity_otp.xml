@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    tools:context=".Ui.OTPActivity">
+
+    <ImageView
+        android:id="@+id/arrowBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/arrow_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/arrowBack"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSkip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Enter \nverification code"
+            android:textColor="@color/txtPurple"
+            android:textSize="@dimen/_25sdp" />
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="Enter verification code. We have sent a one time password to your registered email address. Please add the code for verification."
+            android:textColor="@color/txtGray"
+            android:textSize="@dimen/_14sdp" />
+
+
+        <com.app.xtrahelpcaregiver.CustomView.VerificationCodeView
+            android:id="@+id/view_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            app:vcv_code_bg_focus="@drawable/otp_bg"
+            app:vcv_code_bg_normal="@drawable/otp_bg"
+            app:vcv_code_input_style="true"
+            app:vcv_code_number="4"
+            app:vcv_code_size="@dimen/_12sdp"
+            app:vcv_code_width="@dimen/_42sdp" />
+
+        <TextView
+            android:id="@+id/txtResend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_medium"
+            android:padding="@dimen/_5sdp"
+            android:text="Resend Code"
+            android:textColor="@color/txtOrange"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/txtContinue"
+            style="@style/buttonTheme"
+            android:layout_marginStart="-8dp"
+            android:layout_marginEnd="-8dp"
+            android:clickable="true"
+            android:text="Continue"
+            android:visibility="visible" />
+
+    </LinearLayout>
+</RelativeLayout>

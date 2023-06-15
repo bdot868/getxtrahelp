@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    tools:context=".Ui.PersonalDetailActivity">
+
+    <ImageView
+        android:id="@+id/arrowBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/arrow_back" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/arrowBack"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/arrowBack"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSkip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/rubik_medium"
+                android:text="Personal Details"
+                android:textColor="@color/txtPurple"
+                android:textSize="@dimen/_25sdp" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_115sdp"
+                android:layout_height="@dimen/_115sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/userImg"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_110sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder"
+                    android:theme="@style/shapeRound"
+                    app:strokeColor="@color/txtPurple"
+                    app:strokeWidth="@dimen/_4sdp" />
+
+                <ImageView
+                    android:id="@+id/addImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/add_icon" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etFirstName"
+                style="@style/editTextBg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:capitalize="words"
+                android:hint="First Name*"
+                android:imeOptions="actionNext"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/etLastName"
+                style="@style/editTextBg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:capitalize="words"
+                android:hint="Last Name*"
+                android:imeOptions="actionNext"
+                android:singleLine="true" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <EditText
+                    android:id="@+id/etAge"
+                    style="@style/editTextBg"
+                    android:hint="Age"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Year"
+                    android:textColor="@color/txtOrange"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="Gender"
+                android:textColor="@color/txtDarkGray"
+                android:textSize="@dimen/_13sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtMale"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/select_bg"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:text="Male"
+                        android:textColor="@color/txtOrange"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/txtFemale"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/unselect_bg"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:text="Female"
+                        android:textColor="@color/txtLightPurple"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtOther"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/unselect_bg"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:text="Other"
+                android:textColor="@color/txtLightPurple"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                style="@style/editTextBg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Phone Number*"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="14"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="Are you Vaccinated (Covid-19) ?"
+                android:textColor="@color/txtDarkGray"
+                android:textSize="@dimen/_13sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtYes"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/select_bg"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:text="Yes"
+                    android:textColor="@color/txtOrange"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/txtNo"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/unselect_bg"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:text="No"
+                    android:textColor="@color/txtLightPurple"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtGuidelines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_medium"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/covid_19_guidelines"
+                android:textColor="@color/txtOrange"
+                android:textSize="@dimen/_13sdp" />
+
+            <LinearLayout
+                android:id="@+id/linearHereAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="How did you hear about us?"
+                    android:textColor="@color/txtDarkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <EditText
+                    android:id="@+id/etHearAboutUs"
+                    style="@style/editTextBg"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:drawableEnd="@drawable/spinner"
+                    android:focusable="false"
+                    android:hint="Select"
+                    android:imeOptions="actionNext" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/txtSave"
+                    style="@style/buttonTheme"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:text="Save"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txtNext"
+                    style="@style/buttonTheme"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:text="@string/save_next" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

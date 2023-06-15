@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    tools:context=".Ui.FeedbackActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_20sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_medium"
+                android:text="What do you think\nabout the app?"
+                android:textColor="@color/txtPurple"
+                android:textSize="@dimen/_28sdp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <RadioButton
+                    android:id="@+id/sedFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:background="@drawable/not_happy_all"
+                    android:button="@android:color/transparent" />
+
+                <RadioButton
+                    android:id="@+id/notHappyFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@drawable/not_happy_emoji"
+                    android:button="@android:color/transparent" />
+
+                <RadioButton
+                    android:id="@+id/happyFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@drawable/happy_emoji"
+                    android:button="@android:color/transparent"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/veryHappyFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@drawable/very_happy_emoji"
+                    android:button="@android:color/transparent" />
+
+                <RadioButton
+                    android:id="@+id/loveFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:background="@drawable/love_emoji"
+                    android:button="@android:color/transparent"
+                    android:checked="true" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etFeedBack"
+                style="@style/editTextBg"
+                android:layout_height="@dimen/_220sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="top"
+                android:hint="Give your feed back"
+                android:imeOptions="actionNext"
+                android:singleLine="true" />
+
+
+            <TextView
+                android:id="@+id/txtSubmit"
+                style="@style/buttonTheme"
+                android:layout_marginStart="-8dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="-8dp"
+                android:clickable="true"
+                android:text="Submit Feedback" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:fontFamily="@font/rubik_medium"
+                android:padding="@dimen/_8sdp"
+                android:text="Rate us on Play Store"
+                android:textColor="@color/txtOrange"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

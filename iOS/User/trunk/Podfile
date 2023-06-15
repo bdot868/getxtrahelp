@@ -1,0 +1,103 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'XtraHelp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for XtraHelp
+  #pod "WARangeSlider"
+  #pod 'RangeSeekSlider'
+  pod 'Alamofire'
+  pod 'IQKeyboardManager'
+  pod 'SDWebImage'
+#  pod 'LGSideMenuController'
+
+  pod 'LGSideMenuController','2.1.1'
+  pod 'UITextView+Placeholder'
+  pod 'ActionSheetPicker-3.0'
+  
+  pod 'ActiveLabel'
+
+  # Navigation
+  pod 'ViewControllerDescribable'
+  
+  pod 'ChameleonFramework/Swift'
+  
+  #FireBase
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Messaging'
+  
+  #PullToRefresh
+  pod 'ESPullToRefresh'
+  
+  #Chat
+  pod 'Starscream'
+  # Dependency Injection/Container
+  #pod 'GooglePlaces'
+  pod 'Dip'
+  pod 'R.swift'
+  
+  #Google
+  pod 'GooglePlaces'
+  #pod 'GooglePlacePicker'
+  pod 'GoogleMaps'
+  pod 'GoogleSignIn'
+  
+  #message
+  pod 'SwiftMessages'
+
+  #FSPagerView
+  pod 'FSPagerView'
+  
+  #Calender
+  pod 'FSCalendar'
+  
+  #PageControl
+  pod 'THEPageControl'
+
+  #Loader
+  pod 'SVProgressHUD'
+  
+  #Rating
+  pod 'Cosmos'
+
+#Video
+  #pod 'TwilioVideo'
+  
+  #FB
+  #pod 'FBSDKLoginKit'
+  #pod 'FBSDKCoreKit'
+  
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FBSDKShareKit'
+  
+  #pod 'TwitterKit'
+  pod 'TwitterKit5'
+  #OTP
+  #pod 'DPOTPView'
+  
+  #TextField
+  #pod 'SkyFloatingLabelTextField'
+  pod 'FRHyperLabel'
+  pod 'ActiveLabel'
+
+  target 'XtraHelpTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'XtraHelpUITests' do
+    # Pods for testing
+  end
+
+end
+
+post_install do |installer|
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+  end
+end

@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "776593758763",
+    "project_id": "xtrahelp-6bb4b",
+    "storage_bucket": "xtrahelp-6bb4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776593758763:android:65b52f90d1318f387ae86e",
+        "android_client_info": {
+          "package_name": "com.app.xtrahelpcaregiver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776593758763-t3clirrmfctb97odfve3e81elrvv1jvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCg3g1hSvBSfp8ANTbe-Z5NvTo1cDcWLNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776593758763-t3clirrmfctb97odfve3e81elrvv1jvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776593758763:android:55cd2f9a4a9c52fd7ae86e",
+        "android_client_info": {
+          "package_name": "com.app.xtrahelpuser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776593758763-t3clirrmfctb97odfve3e81elrvv1jvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCg3g1hSvBSfp8ANTbe-Z5NvTo1cDcWLNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776593758763-t3clirrmfctb97odfve3e81elrvv1jvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

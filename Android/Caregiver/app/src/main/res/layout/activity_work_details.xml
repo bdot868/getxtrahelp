@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    tools:context=".Ui.WorkDetailsActivity">
+
+    <ImageView
+        android:id="@+id/arrowBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/arrow_back" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/arrowBack"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/arrowBack"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_70sdp">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSkip"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/rubik_medium"
+                android:text="Work Details"
+                android:textColor="@color/txtPurple"
+                android:textSize="@dimen/_25sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="Job category"
+                android:textColor="@color/txtDarkGray"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/txtSelectCategory"
+                style="@style/editTextBg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Select" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSelectedCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:overScrollMode="never" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="Speciality"
+                android:textColor="@color/txtDarkGray"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/txtSpeciality"
+                style="@style/editTextBg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableEnd="@drawable/spinner"
+                android:hint="Select" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="Maximum distance you're willing to travel"
+                android:textColor="@color/txtDarkGray"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.app.xtrahelpcaregiver.CustomView.TextThumbSeekBar
+                android:id="@+id/makingDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:max="100"
+                android:maxHeight="@dimen/_4sdp"
+                android:min="0"
+                android:progressDrawable="@drawable/seekbar_progress_style"
+                android:thumb="@drawable/seekbar_progress"
+                tools:progress="0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_8sdp"
+                        android:background="#E0E0E0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="0"
+                        android:textColor="#E0E0E0"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_8sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:background="#E0E0E0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="25"
+                        android:textColor="#E0E0E0"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_8sdp"
+                        android:layout_gravity="center"
+                        android:background="#E0E0E0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="50"
+                        android:textColor="#E0E0E0"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_8sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:background="#E0E0E0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="75"
+                        android:textColor="#E0E0E0"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_8sdp"
+                        android:layout_gravity="end"
+                        android:background="#E0E0E0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="100"
+                        android:textColor="#E0E0E0"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="What is your method of transportation"
+                android:textColor="@color/txtDarkGray"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/txtTransportationMethod"
+                style="@style/editTextBg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableEnd="@drawable/spinner"
+                android:hint="Select" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="Types of disabilities caregiver is willing to \nwork with:"
+                android:textColor="@color/txtDarkGray"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/txtDisabilities"
+                style="@style/editTextBg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableEnd="@drawable/spinner"
+                android:hint="Select" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDisabilities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="How many years of experience do you have?"
+                android:textColor="@color/txtDarkGray"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/txtExperience"
+                style="@style/editTextBg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableEnd="@drawable/spinner"
+                android:hint="Select" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Work Experience"
+                    android:textColor="@color/txtDarkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/txtAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:padding="@dimen/_3sdp"
+                    android:text="Add"
+                    android:textColor="@color/txtOrange"
+                    android:textSize="@dimen/_13sdp" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:overScrollMode="never" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="What inspired you to become a caregiver?"
+                android:textColor="@color/txtDarkGray"
+                android:textSize="@dimen/_13sdp" />
+
+            <EditText
+                android:id="@+id/etInspired"
+                style="@style/editTextBg"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="top"
+                android:hint="Type in your reason"
+                android:imeOptions="actionNext" />
+
+            <EditText
+                android:id="@+id/etBio"
+                style="@style/editTextBg"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="top"
+                android:hint="Tell us more about you"
+                android:imeOptions="actionDone" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/txtSave"
+            style="@style/buttonTheme"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:visibility="gone"
+            android:text="Save" />
+
+        <TextView
+            android:id="@+id/txtNext"
+            style="@style/buttonTheme"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:text="@string/save_next" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+
+
+@font-face
+{
+    font-family: 'Rubik-Regular';
+    src: local('Rubik-Regular'),url('Rubik-Regular.otf') format('opentype');
+}
+
+
+body
+{
+    font-family: 'Rubik-Regular';
+    font-size: 45px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    font-weight: normal;
+}

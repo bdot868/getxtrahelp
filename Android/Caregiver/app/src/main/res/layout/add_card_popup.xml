@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/closeImg"
+        android:layout_marginTop="-15sp"
+        android:background="@drawable/popup_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_semibold"
+            android:text="Add Card"
+            android:textColor="@color/txtPurple"
+            android:textSize="@dimen/_18sdp" />
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/editTextBg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="Cardholder name"
+            android:imeOptions="actionNext"
+            android:singleLine="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <EditText
+                android:id="@+id/etCardNumber"
+                style="@style/editTextBg"
+                android:hint="Card number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="19" />
+
+            <ImageView
+                android:id="@+id/card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:src="@drawable/card" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/etExDate"
+                style="@style/editTextBg"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_weight="1"
+                android:hint="Expiry Date"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="5"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/etCVV"
+                style="@style/editTextBg"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_weight="1"
+                android:hint="CVV"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearWeekly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_35sdp">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioWeekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio"
+                    android:checked="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Weekly on Mon"
+                    android:textColor="@color/txtBlack"
+                    android:textSize="@dimen/_13sdp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioEveryWeekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Every weekday (Mon to Fri)"
+                    android:textColor="@color/txtBlack"
+                    android:textSize="@dimen/_13sdp" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="This will be repeated for 30 days to make sure all availabilities fine."
+                android:textColor="@color/txtBlack"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtAddCard"
+            style="@style/buttonTheme"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="-10dp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:clickable="true"
+            android:text="Add Card" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/closeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:src="@drawable/close_icon" />
+    
+</RelativeLayout>

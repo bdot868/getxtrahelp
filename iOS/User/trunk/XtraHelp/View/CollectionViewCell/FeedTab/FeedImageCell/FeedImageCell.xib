@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FeedImageCell" customModule="XtraHelp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="291" height="273"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="291" height="273"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMv-W2-C7w">
+                        <rect key="frame" x="0.0" y="0.0" width="291" height="273"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="r1X-F4-pcM">
+                                <rect key="frame" x="0.0" y="0.0" width="291" height="273"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="r1X-F4-pcM" secondAttribute="bottom" id="CuP-Rd-Gwl"/>
+                            <constraint firstItem="r1X-F4-pcM" firstAttribute="top" secondItem="XMv-W2-C7w" secondAttribute="top" id="Iwr-2U-Lq0"/>
+                            <constraint firstItem="r1X-F4-pcM" firstAttribute="leading" secondItem="XMv-W2-C7w" secondAttribute="leading" id="cmf-dO-BTm"/>
+                            <constraint firstAttribute="trailing" secondItem="r1X-F4-pcM" secondAttribute="trailing" id="iLX-Nn-3mP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="XMv-W2-C7w" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Xab-qe-C5Y"/>
+                <constraint firstAttribute="trailing" secondItem="XMv-W2-C7w" secondAttribute="trailing" id="rcy-Gw-zTs"/>
+                <constraint firstItem="XMv-W2-C7w" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="u08-yH-oPg"/>
+                <constraint firstAttribute="bottom" secondItem="XMv-W2-C7w" secondAttribute="bottom" id="zvi-ms-scm"/>
+            </constraints>
+            <size key="customSize" width="291" height="273"/>
+            <connections>
+                <outlet property="imgFeed" destination="r1X-F4-pcM" id="VkQ-NZ-5pN"/>
+                <outlet property="vwMain" destination="XMv-W2-C7w" id="d6X-Jc-wc8"/>
+            </connections>
+            <point key="canvasLocation" x="306.52173913043481" y="168.41517857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AppPlaceholder" width="1122" height="573"/>
+    </resources>
+</document>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightWhite">#66FFFFFF</color>
+
+    <color name="activity_bg">#FDF8EE</color>
+    <color name="txtPurple">#4D2C5E</color>
+    <color name="txtOrangeLight">#FFAE57</color>
+    <color name="txtLightPurple">#83718B</color>
+    <color name="txtOrange">#F79C1C</color>
+    <color name="txtBlack">#000000</color>
+    <color name="txtGray">#848A94</color>
+    <color name="hintColor">#A89BAE</color>
+    <color name="txtBlue">#037EF3</color>
+    <color name="txtDarkGray">#646464</color>
+    <color name="txtGreen">#30C39E</color>
+
+    //Snack bar
+    <color name="transparent">#00000000</color>
+    <color name="darkRed">#FB4841</color>
+    <color name="darkYellow">#EBA41D</color>
+    <color name="snackGreen">#4CAF50</color>
+    <color name="snackRed">#FF5E5E</color>
+    <color name="snackOrange">#F85949</color>
+    <color name="snackAlertText">#FF0300</color>
+
+</resources>

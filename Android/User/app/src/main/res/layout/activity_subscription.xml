@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    tools:context=".Ui.SubscriptionActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearBottom"
+        android:layout_below="@id/header"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/linearBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:gravity="center"
+            android:text="Purchase the subscription package depending upon your needs.
+Your subscription will be automatically renewed after the timeline is completed."
+            android:textColor="@color/txtGray"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/txtSubscribe"
+            style="@style/buttonTheme"
+            android:layout_marginStart="-8dp"
+            android:layout_marginEnd="-8dp"
+            android:clickable="true"
+            android:text="Subscribe" />
+
+        <TextView
+            android:id="@+id/txtContinueForFree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_medium"
+            android:padding="@dimen/_5sdp"
+            android:text="Continue for free"
+            android:textColor="@color/txtOrange"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+</RelativeLayout>

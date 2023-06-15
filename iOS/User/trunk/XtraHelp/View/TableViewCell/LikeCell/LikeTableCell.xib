@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LikeTableCell" rowHeight="129" id="KGk-i7-Jjw" customClass="LikeTableCell" customModule="XtraHelp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="129"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="364" height="129"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FiJ-IB-5jV">
+                        <rect key="frame" x="0.0" y="0.0" width="364" height="129"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User_Demo" translatesAutoresizingMaskIntoConstraints="NO" id="APl-cN-CSb">
+                                <rect key="frame" x="15" y="47" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="oMZ-Na-MnZ"/>
+                                    <constraint firstAttribute="width" secondItem="APl-cN-CSb" secondAttribute="height" multiplier="1:1" id="qxH-gT-LCC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Josephine Arden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RO8-2V-uxV">
+                                <rect key="frame" x="65" y="10" width="289" height="109"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99280196430000001" green="0.97595161200000002" blue="0.93991285560000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RO8-2V-uxV" firstAttribute="leading" secondItem="APl-cN-CSb" secondAttribute="trailing" constant="15" id="02k-b8-xkO"/>
+                            <constraint firstItem="RO8-2V-uxV" firstAttribute="centerY" secondItem="FiJ-IB-5jV" secondAttribute="centerY" id="3CZ-PB-FSy"/>
+                            <constraint firstItem="RO8-2V-uxV" firstAttribute="top" secondItem="FiJ-IB-5jV" secondAttribute="top" constant="10" id="Cvg-fO-RAA"/>
+                            <constraint firstItem="APl-cN-CSb" firstAttribute="centerY" secondItem="FiJ-IB-5jV" secondAttribute="centerY" id="GsB-1b-fIs"/>
+                            <constraint firstAttribute="trailing" secondItem="RO8-2V-uxV" secondAttribute="trailing" constant="10" id="TMb-yb-dhE"/>
+                            <constraint firstItem="APl-cN-CSb" firstAttribute="leading" secondItem="FiJ-IB-5jV" secondAttribute="leading" constant="15" id="W8z-aj-Sn3"/>
+                            <constraint firstAttribute="bottom" secondItem="RO8-2V-uxV" secondAttribute="bottom" constant="10" id="noJ-aV-W2n"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FiJ-IB-5jV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Jx3-p4-J90"/>
+                    <constraint firstAttribute="bottom" secondItem="FiJ-IB-5jV" secondAttribute="bottom" id="ePZ-JI-bz6"/>
+                    <constraint firstAttribute="trailing" secondItem="FiJ-IB-5jV" secondAttribute="trailing" id="jXF-Ve-zS7"/>
+                    <constraint firstItem="FiJ-IB-5jV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lOn-lb-8G8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="163.768115942029" y="80.022321428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="User_Demo" width="61" height="61"/>
+    </resources>
+</document>

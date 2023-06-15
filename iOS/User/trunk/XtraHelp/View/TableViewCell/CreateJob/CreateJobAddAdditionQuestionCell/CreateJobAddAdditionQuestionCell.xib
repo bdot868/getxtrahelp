@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="144" id="KGk-i7-Jjw" customClass="CreateJobAddAdditionQuestionCell" customModule="XtraHelp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="445" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="445" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qN5-A8-xQN">
+                        <rect key="frame" x="0.0" y="0.0" width="445" height="144"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FvA-T4-2ms">
+                                <rect key="frame" x="0.0" y="0.0" width="445" height="144"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWZ-Ae-3XT">
+                                        <rect key="frame" x="0.0" y="0.0" width="445" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Question 1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If3-Ih-Gmb">
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="79"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vX3-PR-3fv">
+                                                <rect key="frame" x="385" y="20.5" width="60" height="38"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="5" maxY="10"/>
+                                                <state key="normal" title="Delete"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="vX3-PR-3fv" secondAttribute="trailing" id="1bt-Ej-8Zb"/>
+                                            <constraint firstItem="If3-Ih-Gmb" firstAttribute="leading" secondItem="NWZ-Ae-3XT" secondAttribute="leading" id="Jr6-El-gVy"/>
+                                            <constraint firstAttribute="bottom" secondItem="If3-Ih-Gmb" secondAttribute="bottom" id="PXs-QP-dvc"/>
+                                            <constraint firstItem="vX3-PR-3fv" firstAttribute="centerY" secondItem="If3-Ih-Gmb" secondAttribute="centerY" id="bhe-PH-biF"/>
+                                            <constraint firstItem="vX3-PR-3fv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NWZ-Ae-3XT" secondAttribute="top" id="dIu-Oc-Hsg"/>
+                                            <constraint firstItem="If3-Ih-Gmb" firstAttribute="top" secondItem="NWZ-Ae-3XT" secondAttribute="top" id="fnU-HK-ynG"/>
+                                            <constraint firstItem="vX3-PR-3fv" firstAttribute="leading" secondItem="If3-Ih-Gmb" secondAttribute="trailing" constant="15" id="wuP-oS-4fX"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vX3-PR-3fv" secondAttribute="bottom" id="zjd-xq-Vnm"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zkt-8d-j5M" customClass="ReusableView" customModule="XtraHelp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="84" width="445" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="PgB-uI-c8N"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Question"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="txtInputPadding">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="txtInputRightPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="rightLabelText" value="Years"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FvA-T4-2ms" firstAttribute="leading" secondItem="qN5-A8-xQN" secondAttribute="leading" id="9To-VB-eRK"/>
+                            <constraint firstAttribute="bottom" secondItem="FvA-T4-2ms" secondAttribute="bottom" id="QWg-l8-VxH"/>
+                            <constraint firstAttribute="trailing" secondItem="FvA-T4-2ms" secondAttribute="trailing" id="hYv-PD-tyQ"/>
+                            <constraint firstItem="FvA-T4-2ms" firstAttribute="top" secondItem="qN5-A8-xQN" secondAttribute="top" id="l5H-iG-zwi"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qN5-A8-xQN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9L6-W1-CKA"/>
+                    <constraint firstItem="qN5-A8-xQN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gTY-HT-C2E"/>
+                    <constraint firstAttribute="trailing" secondItem="qN5-A8-xQN" secondAttribute="trailing" id="rXx-ZT-D1k"/>
+                    <constraint firstAttribute="bottom" secondItem="qN5-A8-xQN" secondAttribute="bottom" id="teH-Ps-r80"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnRemove" destination="vX3-PR-3fv" id="NbG-De-Jnx"/>
+                <outlet property="lblQuestion" destination="If3-Ih-Gmb" id="4Rx-2H-NWi"/>
+                <outlet property="vwQuestion" destination="Zkt-8d-j5M" id="NWv-J9-kdN"/>
+            </connections>
+            <point key="canvasLocation" x="96.376811594202906" y="147.32142857142856"/>
+        </tableViewCell>
+    </objects>
+</document>

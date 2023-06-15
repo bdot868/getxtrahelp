@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_6sdp">
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/faq_arrow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/rubik_regular"
+        android:text="Totam rem aperiam"
+        android:layout_toEndOf="@+id/arrow"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:textColor="@color/txtGray"
+        android:textSize="@dimen/_13sdp" />
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/userImg"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/placeholder"
+        android:theme="@style/shapeRound" />
+
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_toRightOf="@+id/userImg"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Josephine Arden"
+        android:layout_toLeftOf="@id/selectUnselectImg"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
+
+    <ImageView
+        android:id="@+id/selectUnselectImg"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/radio_unselect" />
+</RelativeLayout>

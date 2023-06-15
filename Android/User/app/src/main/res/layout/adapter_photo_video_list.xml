@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp">
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/_62sdp"
+        android:layout_height="@dimen/_72sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/_57sdp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_1sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dummy_img"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:theme="@style/shapeSquare" />
+
+        <ImageView
+            android:id="@+id/videoPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/play"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/removeImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/_3sdp"
+            android:visibility="gone"
+            android:src="@drawable/remove" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative"
+    tools:context=".Fragment.PreferencesFragment">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/rubik_semibold"
+        android:text="Helper/ Caregiver \nPreferences"
+        android:textColor="@color/txtPurple"
+        android:textSize="@dimen/_28sdp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtTitle"
+        android:overScrollMode="never"
+        android:paddingBottom="@dimen/_50sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:visibility="gone"
+                android:text="Lorem Ipsum is simply dummy text of the printing"
+                android:textColor="@color/txtLightPurple"
+                android:textSize="@dimen/_11sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkHasOwn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_26sdp"
+                    android:button="@drawable/squre_check"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:text="Has own transportation"
+                    android:textSize="@dimen/_11sdp" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkNonSmoker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_26sdp"
+                    android:button="@drawable/squre_check"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:text="Non-smoker"
+                    android:textSize="@dimen/_11sdp" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkMinEx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_26sdp"
+                    android:button="@drawable/squre_check"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:text="Min experience"
+                    android:textSize="@dimen/_11sdp" />
+
+                <EditText
+                    android:id="@+id/etYear"
+                    style="@style/editTextBg"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:hint="Years"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkHasCurrentEmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_26sdp"
+                    android:button="@drawable/squre_check"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:text="Has current employment?"
+                    android:textSize="@dimen/_11sdp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="Additional Questions"
+                    android:textColor="@color/txtPurple"
+                    android:textSize="@dimen/_16sdp" />
+
+                <TextView
+                    android:id="@+id/txtAddQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Add Question"
+                    android:textColor="@color/txtOrange"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="gone"
+                android:fontFamily="@font/rubik_regular"
+                android:text="Lorem Ipsum is simply dummy text of the printing"
+                android:textColor="@color/txtLightPurple"
+                android:textSize="@dimen/_11sdp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:overScrollMode="never" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/relativeBack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cancel_job_button">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:rotation="180"
+                    android:src="@drawable/next_arrow_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:text="Back"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeNext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/modify_ans_button">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:text="Next"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:src="@drawable/next_arrow_small" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

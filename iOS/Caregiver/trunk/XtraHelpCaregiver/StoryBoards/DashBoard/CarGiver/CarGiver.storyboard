@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Car Giver View Controller-->
+        <scene sceneID="wfQ-Y8-GEq">
+            <objects>
+                <viewController storyboardIdentifier="CarGiverViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sf7-Lv-Dnv" customClass="CarGiverViewController" customModule="XtraHelpCaregiver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WNj-p5-2I8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nx-Zn-kWt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hYS-in-n0N">
+                                        <rect key="frame" x="0.0" y="20" width="414" height="798"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wDZ-iA-EAf">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SLD-LL-7Oc">
+                                                        <rect key="frame" x="20" y="0.0" width="374" height="50"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ma-C7-CTG" customClass="SearchView" customModule="XtraHelpCaregiver" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="soN-YP-mgc"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Search Jobs"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3N-kc-G7P">
+                                                                <rect key="frame" x="324" y="0.0" width="50" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="O3N-kc-G7P" secondAttribute="height" multiplier="1:1" id="B31-p3-MAz"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Filter"/>
+                                                                <connections>
+                                                                    <action selector="btnFilterClicked:" destination="Sf7-Lv-Dnv" eventType="touchUpInside" id="QhL-r4-cGn"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="SLD-LL-7Oc" firstAttribute="top" secondItem="wDZ-iA-EAf" secondAttribute="top" id="2e4-3v-A3r"/>
+                                                    <constraint firstAttribute="bottom" secondItem="SLD-LL-7Oc" secondAttribute="bottom" id="6aY-rj-1f0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="SLD-LL-7Oc" secondAttribute="trailing" constant="20" id="oZL-NU-AZa"/>
+                                                    <constraint firstItem="SLD-LL-7Oc" firstAttribute="leading" secondItem="wDZ-iA-EAf" secondAttribute="leading" constant="20" id="qTd-Ss-1mS"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kli-0r-Zg3">
+                                                <rect key="frame" x="0.0" y="65" width="414" height="733"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="hKF-N9-OUt">
+                                                        <rect key="frame" x="20" y="0.0" width="374" height="733"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </tableView>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No CareGiver Available!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiu-Mm-b8H" customClass="NoDataFoundLabel" customModule="XtraHelpCaregiver" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="356.5" width="374" height="20.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="hKF-N9-OUt" secondAttribute="bottom" id="M7R-EH-OlI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hKF-N9-OUt" secondAttribute="trailing" constant="20" id="SyC-3A-UKZ"/>
+                                                    <constraint firstItem="Qiu-Mm-b8H" firstAttribute="leading" secondItem="kli-0r-Zg3" secondAttribute="leading" constant="20" id="Ulh-H0-hEL"/>
+                                                    <constraint firstItem="hKF-N9-OUt" firstAttribute="leading" secondItem="kli-0r-Zg3" secondAttribute="leading" constant="20" id="W3I-6s-p8i"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Qiu-Mm-b8H" secondAttribute="bottom" id="bKC-Gi-Q7t"/>
+                                                    <constraint firstItem="Qiu-Mm-b8H" firstAttribute="centerY" secondItem="kli-0r-Zg3" secondAttribute="centerY" id="cxj-pv-iTM"/>
+                                                    <constraint firstItem="Qiu-Mm-b8H" firstAttribute="centerX" secondItem="kli-0r-Zg3" secondAttribute="centerX" id="kg6-Ac-jpo"/>
+                                                    <constraint firstItem="Qiu-Mm-b8H" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kli-0r-Zg3" secondAttribute="top" id="v8n-zM-iur"/>
+                                                    <constraint firstItem="hKF-N9-OUt" firstAttribute="top" secondItem="kli-0r-Zg3" secondAttribute="top" id="yy3-bX-PmR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Qiu-Mm-b8H" secondAttribute="trailing" constant="20" id="z0f-sl-D4x"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="kli-0r-Zg3" secondAttribute="trailing" id="3Er-L2-EAl"/>
+                                            <constraint firstItem="wDZ-iA-EAf" firstAttribute="leading" secondItem="hYS-in-n0N" secondAttribute="leading" id="PZX-rt-w3k"/>
+                                            <constraint firstAttribute="trailing" secondItem="wDZ-iA-EAf" secondAttribute="trailing" id="ZOR-kh-fqV"/>
+                                            <constraint firstItem="kli-0r-Zg3" firstAttribute="leading" secondItem="hYS-in-n0N" secondAttribute="leading" id="d9c-Tb-zF9"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hYS-in-n0N" secondAttribute="trailing" id="PIO-fb-pDH"/>
+                                    <constraint firstItem="hYS-in-n0N" firstAttribute="top" secondItem="1Nx-Zn-kWt" secondAttribute="top" constant="20" id="Uan-za-kh4"/>
+                                    <constraint firstItem="hYS-in-n0N" firstAttribute="leading" secondItem="1Nx-Zn-kWt" secondAttribute="leading" id="W0m-U7-2Eo"/>
+                                    <constraint firstAttribute="bottom" secondItem="hYS-in-n0N" secondAttribute="bottom" id="dn7-bG-Ixp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Aq4-Ce-gMM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Nx-Zn-kWt" firstAttribute="trailing" secondItem="Aq4-Ce-gMM" secondAttribute="trailing" id="6YA-XS-0Pk"/>
+                            <constraint firstItem="1Nx-Zn-kWt" firstAttribute="top" secondItem="Aq4-Ce-gMM" secondAttribute="top" id="RlN-CY-tbe"/>
+                            <constraint firstItem="1Nx-Zn-kWt" firstAttribute="leading" secondItem="Aq4-Ce-gMM" secondAttribute="leading" id="h5k-PV-CI1"/>
+                            <constraint firstItem="Aq4-Ce-gMM" firstAttribute="bottom" secondItem="1Nx-Zn-kWt" secondAttribute="bottom" id="k2T-gM-9CU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnFilter" destination="O3N-kc-G7P" id="E0d-Nr-NVS"/>
+                        <outlet property="lblNoData" destination="Qiu-Mm-b8H" id="Ztr-Eh-Reb"/>
+                        <outlet property="tblCareGiver" destination="hKF-N9-OUt" id="kjC-e8-zXi"/>
+                        <outlet property="vwContentMain" destination="kli-0r-Zg3" id="4bA-fd-z8K"/>
+                        <outlet property="vwSearch" destination="4Ma-C7-CTG" id="E05-VS-DyB"/>
+                        <outlet property="vwSearchMain" destination="wDZ-iA-EAf" id="l4a-wZ-Vgf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjn-0F-MEW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-465.21739130434787" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="Qiu-Mm-b8H">
+            <size key="intrinsicContentSize" width="178" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Filter" width="31" height="29"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

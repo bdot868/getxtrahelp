@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/closeImg"
+        android:layout_marginTop="-15sp"        
+        android:background="@drawable/popup_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_regular"
+            android:text="Set for 9th Nov"
+            android:textColor="@color/txtPurple"
+            android:textSize="@dimen/_18sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/txtDarkGray"
+            android:textSize="@dimen/_12sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/editTextBg"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_weight="1"
+                android:hint="Start Date" />
+
+            <TextView
+                style="@style/editTextBg"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_weight="1"
+                android:hint="End Date" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_8sdp"
+            android:button="@drawable/squre_check"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/txtBlack"
+            android:fontFamily="@font/rubik_regular"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Repeat this time block" />
+
+
+        <LinearLayout
+            android:id="@+id/linearWeekly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_35sdp">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioWeekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Weekly on Mon"
+                    android:checked="true"
+                    android:textColor="@color/txtBlack"
+                    android:textSize="@dimen/_13sdp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioEveryWeekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Every weekday (Mon to Fri)"
+                    android:textColor="@color/txtBlack"
+                    android:textSize="@dimen/_13sdp" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="This will be repeated for 30 days to make sure all availabilities fine."
+                android:textColor="@color/txtBlack"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtSetAvailability"
+            style="@style/buttonTheme"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:clickable="true"
+            android:text="Set Availability" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/closeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:src="@drawable/close_icon" />
+</RelativeLayout>

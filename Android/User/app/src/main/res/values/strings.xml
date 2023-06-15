@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">XtraHelp User</string>
+    <string name="action">Action</string>
+    <string name="server_client_id">776593758763-t3clirrmfctb97odfve3e81elrvv1jvf.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">1865178127004971</string> <!--//live-->
+    <string name="default_notification_channel_id">com.app.xtrahelpcaregiver</string>
+    <string name="fb_login_protocol_scheme">fb1865178127004971</string>
+
+    <string name="linkedinClientId">78ab6vx75k4ahc</string> <!--//live-->
+    <string name="linkedinClientSecret">S3oUxR65dqXCEKPW</string> <!--//live-->
+    <string name="linkedinClientSCallBackUrl">https://xtrahelp.com</string> <!--//live-->
+
+    <string name="TWITTER_API_KEY">qFjm9MvtCEdcKF3kV9mmpUfpG</string> <!--//live-->
+    <string name="TWITTER_SECRET_KEY">4XCBiBfPqRIqJ4IxjXYqpMhKaa6a659eLX5gAtUYsE5M7vhpPU</string> <!--//live-->
+
+    <string name="navigation_drawer_open">Drawer open</string>
+    <string name="navigation_drawer_close">Drawer close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_comment">CommentActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_base">BaseActivity</string>
+
+    <!-- Permission -->
+    <string name="title_permission_denied">Permission denied</string>
+    <string name="btn_i_am_sure">I\'m sure</string>
+    <string name="btn_retry">Re-Try</string>
+    <string name="msg_sms_permission_denied">Without this permission the app is unable to detect verification code received in your SMS. Are you sure you want to deny this permission?</string>
+    <string name="msg_otp_detection_disabled">SMS permission is not allowed. So auto detection of OTP is disabled.</string>
+    <string name="msg_camera_picture_permission_denied">Without the camera and storage permissions the app is unable to open camera, take a picture and store to the device. Are you sure you want to deny these permissions?</string>
+    <string name="msg_camera_picture_permission">To capture a picture and store to the device the application requires access to the camera and storage. Can you allow camera and storage permissions?</string>
+    <string name="msg_camera_video_permission_denied">Without the camera and storage permissions the app is unable to open camera and take a video. Are you sure you want to deny these permissions?</string>
+    <string name="msg_camera_video_permission">To take a video the application requires access to the camera and storage. Can you allow camera and storage permissions?</string>
+    <string name="msg_location_permission_denied">Without the location permission the app is unable to open map and pick location. Are you sure you want to deny this permission?</string>
+    <string name="msg_location_permission">To pick location the application requires location permission. Can you allow the permission?</string>
+    <string name="msg_storage_permission_denied">Without the storage permission the app is unable to run perfectly. Are you sure you want to deny this permission?</string>
+    <string name="msg_storage_permission">The application requires storage permission to run perfectly. Can you allow storage permission?</string>
+    <string name="msg_gallery_permission_denied">Without the storage permission the app is unable to pick image from gallery. Are you sure you want to deny this permission?</string>
+    <string name="msg_gallery_permission">To pick image from gallery the application requires storage permission. Can you allow storage permission?</string>
+    <string name="msg_contacts_permission_denied">Without the contacts permission the app is unable to get contacts information. Are you sure you want to deny this permission?</string>
+    <string name="msg_contacts_permission">The application requires contacts permission to get contacts information. Can you allow contacts permission?</string>
+    <string name="msg_microphone_permission_denied">Without the microphone permission the app is unable to record audio. Are you sure you want to deny this permission?</string>
+    <string name="msg_microphone_permission">The application requires microphone permission to record audio. Can you allow microphone permission?</string>
+    <string name="msg_basic_permissions_denied">Without the storage and contacts permissions the app is unable to run perfectly. Are you sure you want to deny these permissions?</string>
+    <string name="msg_basic_permissions">The application requires storage and contacts permissions to run perfectly. Can you allow storage and contacts permissions?</string>
+    <string name="msg_qr_scan_permission_denied">Without this permission the app is unable to open camera and scan QR code. Are you sure you want to deny this permission?</string>
+    <string name="msg_qr_scan_permission">To scan the QR code the application required access to the camera. Can you allow camera permission?</string>
+    <string name="msg_gallery_video_permission_denied">Without the storage permission the app is unable to pick image from gallery. Are you sure you want to deny this permission?</string>
+    <string name="msg_gallery_audio_permission_denied">Without the storage permission the app is unable to pick audio from gallery. Are you sure you want to deny this permission?</string>
+    <string name="msg_calender_permission_denied">Without the calender permission the app is unable to add event. Are you sure you want to deny this permission?</string>
+    <string name="msg_gallery_video_permission">To pick image from gallery the application requires storage permission. Can you allow storage permission?</string>
+    <string name="msg_gallery_audio_permission">To pick audio from gallery the application requires storage permission. Can you allow storage permission?</string>
+    <string name="msg_calender_permission">To add an Event to the Calender requires Calender permission. Can you allow calender permission?</string>
+    <string name="action_yes">Yes</string>
+    <string name="action_no">No</string>
+    <string name="ok">OK</string>
+    <string name="connected">Connected</string>
+    <string name="skip">Skip</string>
+
+    <string name="retry">Retry</string>
+    <string name="enterEmail">Please enter Email Address</string>
+    <string name="enterValidEmail">Enter a valid Email Address</string>
+    <string name="enterPassword">Please enter password</string>
+    <string name="setting">Setting</string>
+    <string name="enterName">Please enter full name</string>
+    <string name="enterConfirmPwd">Please confirm your password</string>
+    <string name="password_length">Password must be 8 to 15 character</string>
+    <string name="passwordNotMatch"><![CDATA["Password & reenter password are not match"]]></string>
+    <string name="enterWorkPlace">Please enter work place</string>
+    <string name="enterReason">Please enter leaving reason</string>
+    <string name="enterDesc">Please enter description</string>
+    <string name="selectStartDate">Please select start date</string>
+    <string name="selectEndDate">Please select end date</string>
+    <string name="selectCategory">Please select category</string>
+    <string name="selectSpeciality">Please select speciality</string>
+    <string name="selectDistance">Please select distance you\'re willing to travel</string>
+    <string name="selectTransportMethod">Please select method of transportation</string>
+    <string name="selectDisability">"Please select Types of disabilities "</string>
+    <string name="selectExperience">Please select experience do you have</string>
+    <string name="enterInspire">Please enter what inspired you to become a caregiver</string>
+    <string name="enterBio">Please enter bio</string>
+    <string name="enterOldPwd">Please enter old password</string>
+    <string name="newAndOldPWd">Old and new password not be same</string>
+    <string name="enterNewPassword">Please enter new password</string>
+
+    <string name="noInternet">No internet connection please connect internet</string>
+    <string name="serverNotResponding">Server Not Responding</string>
+    <string name="check_your_internet_connection">Check your internet connection!</string>
+    <string name="server_not_responding">Server not responding!</string>
+    <string name="invalid_data_response">Invalid data response!</string>
+    <string name="enterConfirmPwds">Please enter confirm password</string>
+    <string name="enterFirstName">Please enter first name</string>
+    <string name="enterLastName">Please enter last name</string>
+    <string name="enterAge">Please enter age</string>
+    <string name="enterPhone">Please enter phone number</string>
+    <string name="enterTitle">Please enter ticket title</string>
+    <string name="selectHereAbout">Please select how did you hear about us</string>
+    <string name="selectPlanningtoHire">How soon you planning to hire</string>
+    <string name="selectSubCategory">Please select sub category</string>
+    <string name="video_MaxLimit">Your video file can\'t be uploaded because selected video length exceeds the limit of 60 seconds.Retry with another file.</string>
+    <string name="enterFeedBack">Please enter feedback</string>
+    <string name="enter_card_holder_name">Please enter holder name</string>
+    <string name="enter_card_number">Please enter card number</string>
+    <string name="enter_card_valid_number">Please enter valid card number</string>
+    <string name="enter_expiry">Please enter expiry date</string>
+    <string name="enter_cvv">Please enter cvv</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="report">Report</string>
+    <string name="enterRating">Please rate caregiver</string>
+    <string name="covid_19_guidelines"><u>Covid 19 Guidelines</u></string>
+
+</resources>

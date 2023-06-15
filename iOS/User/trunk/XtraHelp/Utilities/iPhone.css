@@ -1,0 +1,21 @@
+
+
+@font-face
+{
+    font-family: 'Poppins-Regular';
+    src: local('Poppins-Regular'),url('Poppins-Regular.ttf') format('opentype');
+}
+
+
+body
+{
+    font-family: 'Poppins-Regular';
+    font-size: 40px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    font-weight: normal;
+}
+
+
+
+

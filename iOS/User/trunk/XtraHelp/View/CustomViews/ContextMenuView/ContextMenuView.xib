@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ContextMenuView" id="iN0-l3-epB" customClass="ContextMenuView" customModule="ChiryDoctor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="665"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHy-1k-gco">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="665"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17J-5r-2N3">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="665"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="btnCloseClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Tyq-HJ-j1W"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pag-WE-LOK">
+                    <rect key="frame" x="0.0" y="0.0" width="384" height="276"/>
+                    <subviews>
+                        <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9mW-o7-qaM">
+                            <rect key="frame" x="2" y="10" width="380" height="256"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k22-Sb-NQ2">
+                                    <rect key="frame" x="0.0" y="0.0" width="380" height="128"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhf-6Z-YqX">
+                                            <rect key="frame" x="0.0" y="0.0" width="380" height="128"/>
+                                            <inset key="contentEdgeInsets" minX="15" minY="5" maxX="15" maxY="5"/>
+                                            <state key="normal" title="Reschedule Appointment"/>
+                                            <connections>
+                                                <action selector="btnRescheduleAppointmentClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="JDh-tW-cXC"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Rhf-6Z-YqX" secondAttribute="trailing" id="GLg-gR-xjR"/>
+                                        <constraint firstItem="Rhf-6Z-YqX" firstAttribute="leading" secondItem="k22-Sb-NQ2" secondAttribute="leading" id="Gjv-jI-EdQ"/>
+                                        <constraint firstItem="Rhf-6Z-YqX" firstAttribute="top" secondItem="k22-Sb-NQ2" secondAttribute="top" id="Tac-j0-Sjd"/>
+                                        <constraint firstAttribute="bottom" secondItem="Rhf-6Z-YqX" secondAttribute="bottom" id="nmN-Ik-nqM"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlI-Zt-tbS">
+                                    <rect key="frame" x="0.0" y="128" width="380" height="128"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoU-UP-uwQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="380" height="128"/>
+                                            <inset key="contentEdgeInsets" minX="15" minY="5" maxX="15" maxY="5"/>
+                                            <state key="normal" title="Cancel Appointment"/>
+                                            <connections>
+                                                <action selector="btnCancelAppointmentClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="b8c-3B-5vh"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="aoU-UP-uwQ" secondAttribute="bottom" id="eeX-3i-Whk"/>
+                                        <constraint firstAttribute="trailing" secondItem="aoU-UP-uwQ" secondAttribute="trailing" id="nuE-5H-yhp"/>
+                                        <constraint firstItem="aoU-UP-uwQ" firstAttribute="leading" secondItem="hlI-Zt-tbS" secondAttribute="leading" id="rHU-Pu-5PW"/>
+                                        <constraint firstItem="aoU-UP-uwQ" firstAttribute="top" secondItem="hlI-Zt-tbS" secondAttribute="top" id="shS-rT-MMv"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="9mW-o7-qaM" firstAttribute="top" secondItem="pag-WE-LOK" secondAttribute="top" constant="10" id="Nwg-3s-rti"/>
+                        <constraint firstAttribute="bottom" secondItem="9mW-o7-qaM" secondAttribute="bottom" constant="10" id="WYU-DP-E33"/>
+                        <constraint firstAttribute="trailing" secondItem="9mW-o7-qaM" secondAttribute="trailing" constant="2" id="iVL-Bs-S0q"/>
+                        <constraint firstItem="9mW-o7-qaM" firstAttribute="leading" secondItem="pag-WE-LOK" secondAttribute="leading" constant="2" id="jPn-n7-40T"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="AHy-1k-gco" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2O3-zn-7AK"/>
+                <constraint firstItem="AHy-1k-gco" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3Wl-tg-Ww6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pag-WE-LOK" secondAttribute="trailing" constant="30" id="EDu-Ir-bdb"/>
+                <constraint firstAttribute="bottom" secondItem="17J-5r-2N3" secondAttribute="bottom" id="GBg-4m-Bcd"/>
+                <constraint firstItem="17J-5r-2N3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SON-MF-Nnv"/>
+                <constraint firstItem="17J-5r-2N3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YaX-eS-mvm"/>
+                <constraint firstItem="pag-WE-LOK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dUc-R2-Drz"/>
+                <constraint firstItem="pag-WE-LOK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" id="oLG-cf-MFs"/>
+                <constraint firstAttribute="trailing" secondItem="AHy-1k-gco" secondAttribute="trailing" id="sV9-mj-aZ9"/>
+                <constraint firstAttribute="bottom" secondItem="AHy-1k-gco" secondAttribute="bottom" id="yPH-5r-CGw"/>
+                <constraint firstAttribute="trailing" secondItem="17J-5r-2N3" secondAttribute="trailing" id="yaf-xs-v0p"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnCancelAppointment" destination="aoU-UP-uwQ" id="zG9-7Y-dtf"/>
+                <outlet property="btnRescheduleAppointment" destination="Rhf-6Z-YqX" id="ISr-mD-Ykb"/>
+                <outlet property="constarintTopVwMainContent" destination="dUc-R2-Drz" id="TEU-Qw-DaP"/>
+                <outlet property="vwMainContent" destination="pag-WE-LOK" id="eHX-db-8mc"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="205.91517857142856"/>
+        </view>
+    </objects>
+</document>

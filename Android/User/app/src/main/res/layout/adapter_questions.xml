@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/edit_text_bg">
+
+        <EditText
+            android:id="@+id/etQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@null"
+            android:textColorHint="@color/hintColor"
+            android:fontFamily="@font/rubik_regular"
+            android:textSize="@dimen/_11sdp"
+            android:hint="Question 1"
+            android:textColor="@color/black"
+            android:padding="@dimen/_15sdp"
+            android:imeOptions="actionDone"
+            android:layout_toLeftOf="@+id/remove"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/remove" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

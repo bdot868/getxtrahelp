@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:bottom="@dimen/_2sdp"
+        android:left="-5dp"
+        android:right="-5dp"
+        android:top="-5dp">
+        <shape android:shape="rectangle"/>
+    </item>
+
+    <item
+        android:width="@dimen/_12sdp"
+        android:height="@dimen/_10sdp"
+        android:drawable="@drawable/arrow_down"
+        android:gravity="right|center" />
+
+</layer-list>

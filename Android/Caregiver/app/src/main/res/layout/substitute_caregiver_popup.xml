@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/closeImg"
+        android:layout_marginTop="-15sp"
+        android:background="@drawable/popup_bg"
+        android:padding="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/txtSubmit"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/rubik_medium"
+                android:text="Substitute Caregiver"
+                android:textColor="@color/txtPurple"
+                android:textSize="@dimen/_18sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:text="Thinking about leaving the job, you can choose a substitute for the family."
+                android:textColor="@color/txtDarkGray"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/search_bg"
+                android:drawableStart="@drawable/search_gray_icon"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:hint="Search here"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:paddingStart="@dimen/_20sdp"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/txtDataNotFound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:padding="@dimen/_55sdp"
+                android:text="Data not found"
+                android:textColor="@color/txtBlack"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerCaregiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:overScrollMode="never" />
+
+            <LinearLayout
+                android:id="@+id/linearWeekly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_35sdp">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/radioWeekly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radio"
+                        android:checked="true"
+                        android:fontFamily="@font/rubik_regular"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="Weekly on Mon"
+                        android:textColor="@color/txtBlack"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/radioEveryWeekly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radio"
+                        android:fontFamily="@font/rubik_regular"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="Every weekday (Mon to Fri)"
+                        android:textColor="@color/txtBlack"
+                        android:textSize="@dimen/_13sdp" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="This will be repeated for 30 days to make sure all availabilities fine."
+                    android:textColor="@color/txtBlack"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtSubmit"
+            style="@style/buttonTheme"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:text="Submit" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/closeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:src="@drawable/close_icon" />
+</RelativeLayout>

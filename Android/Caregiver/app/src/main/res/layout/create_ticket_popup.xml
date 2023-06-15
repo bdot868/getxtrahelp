@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/closeImg"
+        android:layout_marginTop="-15sp"
+        android:background="@drawable/popup_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Create Ticket"
+            android:textColor="@color/txtPurple"
+            android:textSize="@dimen/_18sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:gravity="center"
+            android:text="Create a ticket Facing a problem, create a ticket and talk with our 24*7 support."
+            android:textColor="@color/txtDarkGray"
+            android:textSize="@dimen/_12sdp" />
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/editTextBg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="Ticket title"
+            android:imeOptions="actionNext"
+            android:singleLine="true" />
+
+        <EditText
+            style="@style/editTextBg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="Select Subject"
+            android:imeOptions="actionNext"
+            android:visibility="gone"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/etDesc"
+            style="@style/editTextBg"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="top"
+            android:hint="Describe your issue" />
+
+        <LinearLayout
+            android:id="@+id/linearWeekly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_35sdp">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioWeekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio"
+                    android:checked="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Weekly on Mon"
+                    android:textColor="@color/txtBlack"
+                    android:textSize="@dimen/_13sdp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioEveryWeekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Every weekday (Mon to Fri)"
+                    android:textColor="@color/txtBlack"
+                    android:textSize="@dimen/_13sdp" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="This will be repeated for 30 days to make sure all availabilities fine."
+                android:textColor="@color/txtBlack"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtStartChat"
+            style="@style/buttonTheme"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:clickable="true"
+            android:text="Start Chat" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/closeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:src="@drawable/close_icon" />
+</RelativeLayout>

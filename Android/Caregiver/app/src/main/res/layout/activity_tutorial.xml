@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    tools:context=".Ui.TutorialActivity">
+
+    <TextView
+        android:id="@+id/txtSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="@dimen/_8sdp"
+        android:text="Skip"
+        android:textColor="@color/txtOrange"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_85sdp"
+        android:layout_below="@+id/txtSkip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="Your Xtra Help can change somebody’s world."
+        android:textColor="@color/txtPurple"
+        android:textSize="@dimen/_25sdp" />
+
+    <TextView
+        android:id="@+id/txtDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_below="@+id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="@font/rubik_regular"
+        android:gravity="center"
+        android:text="If you are qualified to be a caregiver, be a part of a family that might need your special care."
+        android:textColor="@color/txtLightPurple"
+        android:textSize="@dimen/_16sdp" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="10dp"
+        android:layout_below="@+id/txtDesc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:max="3"
+        android:progress="1"
+        android:progressDrawable="@drawable/progress_bg" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/progressBar"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <ImageView
+        android:id="@+id/arrowNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:src="@drawable/next_arrow" />
+
+</RelativeLayout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLeft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_70sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/leftMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:textColorLink="@color/txtBlue"
+            android:layout_margin="@dimen/_3sdp"
+            android:background="@drawable/message_left_bg"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            android:text="Cool, let's talk about it later, shall we? This is going to be a huge!! We "
+            android:textColor="#848A94"
+            android:textSize="@dimen/_12sdp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_3sdp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/userImgLeft"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/dummy_user"
+                android:theme="@style/shapeRound" />
+
+            <TextView
+                android:id="@+id/leftTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="15.30"
+                android:includeFontPadding="false"
+                android:textColor="#848A94"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rightMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:autoLink="all"
+            android:textColorLink="@color/txtBlue"
+            android:layout_margin="@dimen/_3sdp"
+            android:background="@drawable/message_right_bg"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            android:paddingBottom="@dimen/_12sdp"
+            android:text="Sure, is this the final attachment?"
+            android:textColor="#F79C1C"
+            android:textSize="@dimen/_12sdp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_2sdp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/userImgRight"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/dummy_user"
+                android:theme="@style/shapeRound" />
+
+            <TextView
+                android:id="@+id/rightTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="15.30"
+                android:textColor="#848A94"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeRightImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rightCardView"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_1sdp"
+            app:cardCornerRadius="@dimen/_8sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/imgRightSide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/main_placeholder" />
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/rightImgTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rightCardView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="12:15 AM"
+            android:textColor="#848A94"
+            android:textSize="@dimen/_9sdp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLeftImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/leftCardView"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_5sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/imgLeftSide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/main_placeholder" />
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/leftImgTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leftCardView"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="12:15 AM"
+            android:textColor="#848A94"
+            android:textSize="@dimen/_9sdp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeRightCaregiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_60sdp"
+        android:visibility="gone">
+
+        <include layout="@layout/refer_caregiver_right_layout" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeRightFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_60sdp"
+        android:visibility="gone">
+
+        <include layout="@layout/send_doc_layout" />
+
+    </RelativeLayout>
+
+</LinearLayout>

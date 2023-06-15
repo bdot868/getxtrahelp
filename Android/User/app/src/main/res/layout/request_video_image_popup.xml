@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/closeImg"
+        android:layout_marginTop="-15sp"
+        android:background="@drawable/popup_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_semibold"
+            android:text="Request"
+            android:textColor="@color/txtPurple"
+            android:textSize="@dimen/_18sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:layout_below="@+id/txtTitle"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Choose whether you would like the caregiver to send you a photo or video of your loved one currently."
+            android:textColor="@color/txtGray" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_8sdp">
+
+
+            <RelativeLayout
+                android:id="@+id/relativeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/request_media_unselect"
+                android:paddingStart="@dimen/_22sdp"
+                android:paddingTop="@dimen/_30sdp"
+                android:paddingEnd="@dimen/_22sdp"
+                android:paddingBottom="@dimen/_30sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/request_image" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@drawable/request_media_unselect"
+                android:paddingStart="@dimen/_21sdp"
+                android:paddingTop="@dimen/_30sdp"
+                android:paddingEnd="@dimen/_21sdp"
+                android:paddingBottom="@dimen/_30sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/request_video" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtSubmit"
+            style="@style/buttonTheme"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="-10dp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:clickable="true"
+            android:text="Submit" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/closeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:src="@drawable/close_icon" />
+
+</RelativeLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative"
+    android:background="@color/activity_bg"
+    tools:context=".Ui.BankDetailActivity">
+
+    <include layout="@layout/header"
+        android:id="@+id/header"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_20sdp">
+
+            <LinearLayout
+                android:id="@+id/linearLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="Bank Account"
+                    android:textColor="@color/txtBlack"
+                    android:textSize="@dimen/_20sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLogin"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etHolderName"
+                    style="@style/editTextBg"
+                    android:hint="Account Holder Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/etRoutingNumber"
+                    style="@style/editTextBg"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="Routing Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="number" />
+
+
+                <EditText
+                    android:id="@+id/etAccountNumber"
+                    style="@style/editTextBg"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="Account Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="14" />
+
+                <EditText
+                    android:id="@+id/etReAccountNumber"
+                    style="@style/editTextBg"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="Confirm Account Number"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Account Type"
+                    android:textColor="@color/txtBlack"
+                    android:textSize="@dimen/_11sdp" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioIndividual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:buttonTint="@color/txtOrange"
+                        android:checked="true"
+                        android:fontFamily="@font/rubik_medium"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="Individual"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <RadioButton
+                        android:id="@+id/radioCompany"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:buttonTint="@color/txtOrange"
+                        android:fontFamily="@font/rubik_medium"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="Company"
+                        android:textSize="@dimen/_11sdp" />
+                </RadioGroup>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/txtFinish"
+        style="@style/buttonTheme"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="Finish" />
+
+</RelativeLayout>
